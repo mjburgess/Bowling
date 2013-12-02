@@ -10,12 +10,20 @@ Breif: create a bowling scoring system
 * Gutter game, 0 points
 * Open frame, less than 10 points in a frame
 
+# Running
+ruby run/bowling.rb
+
+The full solution is in PHP, so I have just used the in-built PHP server to simplify running it.
+
 # Notes
 
 ### Completion time
 
-Prototype:         1 Hour  - 01/12/2013, 11pm
-PHP Application: 2.5 Hours - 02/12/2013 10.30am
+* Prototype:         
+* 1 Hour  - 01/12/2013, 11pm - 12am
+
+* PHP Application
+* 2.5 Hours - 02/12/2013 10.30am - 1.30pm
 
 ## Prototype
 
@@ -66,12 +74,12 @@ In particular, HttpJsonAction retruns a json_encode'd HttpResponse,
 and essentially wraps the abstract Action's dispatch method.
 
 
- ## Tests
+## Tests
 
- There are basic tests for the prototype (Test::Unit) and complete tests for the PHP application (PHPUnit).
+There are basic tests for the prototype (Test::Unit) and complete tests for the PHP application (PHPUnit).
 
- I havent create a Rakefile to integrate with Travis-CI, nor a gemspec to install.
- That would be next however, as well as fleshing out the prototype tests.
+I havent create a Rakefile to integrate with Travis-CI, nor a gemspec to install.
+That would be next however, as well as fleshing out the prototype tests.
 
 
 ## Unfinished
