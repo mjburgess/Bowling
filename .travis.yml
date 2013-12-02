@@ -8,5 +8,5 @@ before_script:
 
 after_script:
   - ls
-  - php bin/coverage.php coverage.xml 95
+  - php run/coverage.php coverage.xml 95
   - cat coverage.xml
