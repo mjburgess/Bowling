@@ -1,0 +1,15 @@
+<phpunit bootstrap="src/backend-php/vendor/autoload.php">
+    <testsuites>
+        <testsuite name="Bowling Test Suite">
+            <directory>test</directory>
+        </testsuite>
+    </testsuites>
+	<filter>
+	<whitelist addUncoveredFilesFromWhitelist="true">
+		<directory suffix=".php">./src/backend-php/</directory>
+	</whitelist>
+	</filter>
+	<logging>
+	<log type="coverage-clover" target="./coverage.xml"/>
+	</logging>
+</phpunit>

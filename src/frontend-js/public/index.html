@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bowling Game - Coding Examplar">
+    <meta name="author" content="Michael J. Burgess <micahel@mjburgess.co.uk>">
+
+    <title>Bowling</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="/assets/js/pretty.js"></script>
+
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .content {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+<!-- AJAX Response Needs work... just allowing the form to submit normally for now
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input#submit').click( function(event) {
+                event.preventDefault();
+                $.ajax({
+                    url: 'http://localhost:8000/?x='+Math.random() ,
+                    type: 'post',
+                    dataType: 'json',
+                    data: $('form#score_form').serialize(),
+                    success: function(data) {
+                        $('div#response').text(data.score);
+                    }
+                });
+            });
+        })
+    </script>
+-->
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Bowling</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <h1>A Bowling Game</h1>
+        <p class="lead">enter your score!</p>
+        <div id="scoring">
+            <form id="score_form" name="score_form" method="post" action="http://localhost:8000" >
+                <input type="hidden" name="action" value="bowling\action\ScoreAction" />
+                <div id="score">
+                    <label for="roll">
+                        <input type="text" id="roll" name="roll" value="" />
+                    </label>
+                </div>
+                <div id="buttons">
+                    <input type="submit" name="submit" id="submit" value="Update" />
+                    <input type="submit" name="clear" id="clear" value="Clear" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="results">
+        <h1>Results</h1>
+        <div id="response"></div>
+    </div>
+</div>
+</body>
+</html>

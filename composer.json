@@ -1,0 +1,25 @@
+{
+    "name": "mjburgess/bowling",
+    "type": "app",
+    "description": "Easily score a bowling game",
+    "keywords": ["bowling"],
+    "homepage": "http://mjburgess.co.uk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Burgess",
+            "email": "michael@mjburgess.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">= 5.4"
+    },
+    "autoload": {
+        "psr-0" : {
+            "bowling" : ["src/backend-php/lib", "src/backend-php/lib"]
+        }
+    },
+	"config": {
+		"vendor-dir": "src/backend-php/vendor"
+	}
+}
